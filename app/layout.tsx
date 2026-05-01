@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter, Fraunces } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' });
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-display' });
 
 export const metadata: Metadata = {
   title: 'Kandy Dilruk Homestay | Escape to the Clouds',
@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} h-full antialiased smooth-scroll`}>
-      <body className="min-h-full flex flex-col overflow-x-hidden font-sans text-cream bg-background selection:bg-sunset selection:text-white">
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} h-full antialiased smooth-scroll`}>
+      <body className="min-h-full flex flex-col overflow-x-hidden font-sans bg-background text-foreground selection:bg-accent selection:text-accent-foreground">
         {children}
       </body>
     </html>
